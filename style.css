@@ -1,5 +1,5 @@
 :root {
-    --background:#1c1c1c;
+    --background:#151515;
     --button:#87D6F8;
 
 }
@@ -66,7 +66,8 @@ p {
 header {
     position:fixed;
     background-color:rgba(24, 24, 24, 0.5);
-    background-color:#1c1c1c75
+    background-color:#1515155c;
+    backdrop-filter: blur(10px);
 }
 .header-wrapper {
     padding:2rem 4rem;
@@ -80,7 +81,7 @@ header {
     display:flex;
     align-items: center;
     justify-content: center;
-    gap:6rem;
+    gap:4rem;
     font-weight:300;
 }
 a {
@@ -186,7 +187,7 @@ a {
 
 /************ Main ******/
 main {
-    background-image:url(images/bgdark.png);
+    background-image:linear-gradient(to top, #151515, #15151500), url(images/lll-hero.png);
     background-size:cover;
     background-repeat:no-repeat;
 
@@ -199,12 +200,14 @@ main {
     padding-bottom:18rem;
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap:1rem;
+    text-align:center;
 }
 .hero-wrapper h1 {
     font-weight:900;
     line-height:1.25;
+    font-size:4rem;
 }
 .hero-wrapper p {
     font-weight:300;
