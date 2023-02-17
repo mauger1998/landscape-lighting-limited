@@ -331,6 +331,7 @@ main {
     display:flex;
     gap:2rem;
     align-items: flex-start;
+    flex-direction: column;
 }
 .suppliers-wrapper .suppliers-titles {
     text-align:center;
@@ -358,7 +359,6 @@ main {
     
 }
 .supplier {
-    background-color:rgb(36, 36, 36);
     padding:2rem 1rem;
     display:flex;
     flex-direction: column;
@@ -367,10 +367,16 @@ main {
     border-radius:1rem;
     width:100%;
     text-align:center;
+    justify-content: space-between;
 }
 .supplier p {
-    width:85%;
+    width:50%;
     text-align:center;
+}
+@media (max-width:1000px) {
+    .supplier p{
+        width:75%;
+    }
 }
 @media (max-width:850px) {
     .supplier-wrapper {
@@ -385,6 +391,9 @@ main {
 @media (max-width:560px) {
     .suppliers-titles h2 {
         font-size:2rem !important;
+    }
+    .supplier p {
+        width:100%;
     }
 }
 @media (max-width:500px) {
@@ -413,6 +422,27 @@ main {
     letter-spacing: 1rem;
     font-size:0.5rem;
 }
+
+a:nth-child(1) .card {
+    background-image:
+    linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%)20%),url('images/corner-one.png');    
+    background-size:cover;
+}
+a:nth-child(2) .card{
+    background-image:
+    linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%)20%),url('images/corner-two.png');     
+    background-size:cover;
+}
+a:nth-child(3) .card {
+    background-image:
+    linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%) 95%),url('images/corner-three.png');     
+    background-size:cover;
+}
+a:nth-child(4) .card {
+    background-image:
+    linear-gradient(to bottom, rgba(28, 28, 28, 0.01), rgba(0, 0, 0, 100%)20%), url('images/corner-four.png');     
+    background-size:cover;
+}
 .card {
     padding:2rem;
     padding-bottom:1rem;
@@ -420,32 +450,11 @@ main {
     background-color:var(--background);
     width:100%;
     border-radius:2rem;
-    height:max-content;
+    min-height:25rem;
+    display:flex;
+    align-items: flex-end;
 
-}
-a:nth-child(1) .card {
-    background-image:
-    linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%)),
-    url('images/corner-one.png');    
-    background-size:cover;
-}
-a:nth-child(2) .card{
-    background-image:
-    linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%)),
-    url('images/corner-two.png');     
-    background-size:cover;
-}
-a:nth-child(3) .card {
-    background-image:
-    linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%) 95%),
-    url('images/corner-three.png');     
-    background-size:cover;
-}
-a:nth-child(4) .card {
-    background-image:
-    linear-gradient(to bottom, rgba(28, 28, 28, 0.01), rgba(0, 0, 0, 100%)),
-    url('images/corner-four.png');     
-    background-size:cover;
+
 }
 .cards {
     display:grid;
@@ -539,6 +548,8 @@ a:nth-child(4) .card {
     .grid-wrapper {
        grid-template-columns: 1fr;
        padding-block:12rem;
+       gap:4rem;
+
     }
     .grid-item {
         gap:2rem !important;
@@ -765,4 +776,10 @@ footer a {
     .footer-wrapper {
         padding-inline:1rem;
     }
+}
+
+
+.admin-grid-wrapper img {
+    aspect-ratio:4/4;
+    object-fit:cover;
 }

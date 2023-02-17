@@ -126,12 +126,13 @@ fetch(URLFOUR)
             const cardImgArray = document.querySelectorAll(".card")
 
             result.forEach((result, index) => {
-                cardImgArray[index].style.backgroundImage = `linear-gradient(to bottom, rgba(28, 28, 28, 0), rgba(0, 0, 0, 100%)), url(${result.imageUrl})`
+                cardImgArray[index].style.backgroundImage = `linear-gradient(to top, rgba(0, 0, 0, 100%), rgba(28, 28, 28, 0) 50%), url(${result.imageUrl})`
             })
             
         })
 
 //Card Text
+
 
 let QUERYFIVE = encodeURIComponent(`*[_type == 'cards']`);
 
