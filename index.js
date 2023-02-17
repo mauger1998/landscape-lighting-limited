@@ -148,3 +148,23 @@ fetch(URLFIVE)
             })
             
         })
+
+// Supplier Cards
+
+
+let QUERYSIX = encodeURIComponent(`*[_type == 'supplierCards']`);
+
+let URLSIX = `https://i3whaemx.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20'supplierCards'%5D%0A%20%20`;
+
+fetch(URLSIX)
+        .then((res) => res.json())
+        .then(({ result }) => {
+            const supplierCardHeading = document.querySelectorAll(".supplier h2")
+            const supplierText = document.querySelectorAll(".supplier p")
+
+            result.forEach((result, index) => {
+                supplierCardHeading[index].textContent = result.heading
+                supplierText[index].textContent = result.text
+            })
+            
+        })
