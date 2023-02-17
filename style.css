@@ -300,11 +300,11 @@ main {
 /**************/
 .social-banner-wrapper {
     width:100%;
-    max-width:1440px;
     background-color:white;
     display:flex;
     align-items: center;
-    justify-content: center;gap:4rem;
+    justify-content: center;
+    gap:4rem;
     padding-block:0.25rem;
 
 }
