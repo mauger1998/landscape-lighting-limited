@@ -109,7 +109,6 @@ a {
     display:grid;
     grid-template-columns:1fr 1fr;
     width:max-content;
-    height:max-content;
     opacity:0;
     transform:translateY(-1rem);
     transition:opacity 0.5s, transform 0.5s;
