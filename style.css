@@ -450,7 +450,7 @@ a:nth-child(4) .card {
     background-color:var(--background);
     width:100%;
     border-radius:2rem;
-    min-height:25rem;
+    min-height:25rem; 
     display:flex;
     align-items: flex-end;
 
