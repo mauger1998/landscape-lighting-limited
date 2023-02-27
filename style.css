@@ -782,3 +782,6 @@ footer a {
     aspect-ratio:4/4;
     object-fit:cover;
 }
+.footer-bottom a img {
+    width:100% !important;
+}
